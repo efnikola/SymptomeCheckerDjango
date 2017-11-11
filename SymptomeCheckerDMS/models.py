@@ -32,7 +32,7 @@ class DMSProcedure(models.Model):
     # Fields
     client_id = models.OneToOneField('DMSClient', on_delete=models.SET_NULL, null=True)
     procedure_name = models.CharField(max_length=20, help_text="Enter procedure's name")
-    cost = models.IntegerField(max_length=20, help_text="Enter the cost")
+    cost = models.IntegerField(help_text="Enter the cost")
     #sex = models.CharField(max_length=20, help_text="Enter your sex")
 
 
