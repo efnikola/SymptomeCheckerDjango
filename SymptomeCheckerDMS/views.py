@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
+
 
 # Create your views here.
 def index(request):
@@ -19,10 +20,27 @@ def index(request):
         'index.html',
         context={},
     )
+
+
 def symptom(request):
 
     return render(
         request,
         'symptom.html',
+        context={},
+    )
+
+
+def welcome(request):
+    return HttpResponse('Welcome bitches!')
+
+def fuckyou(request):
+    return HttpResponse('Fuck you!')
+
+def test(request):
+
+    return render(
+        request,
+        'test.html',
         context={},
     )
