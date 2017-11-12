@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.contrib import auth
+from django.http import HttpResponse
+from django.views.generic import ListView
+from.models import DMSProcedure
 
 # Create your views here.
 def index(request):
@@ -26,3 +30,29 @@ def symptom(request):
         'symptom.html',
         context={},
     )
+def about(request):
+
+    return render(
+        request,
+        'about.html',
+        context={},
+    )
+def register(request):
+
+    return render(
+        request,
+        'register.html',
+        context={},
+    )
+def testbootstrap(request):
+
+    return render(
+        request,
+        'twbs-bootstrap-2c2ac33\src\pages\index.html',
+        context={},
+    )
+
+
+def compute(request):
+
+    return render(request,'register.html')

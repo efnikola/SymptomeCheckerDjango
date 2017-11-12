@@ -131,3 +131,35 @@ class DMSUser(models.Model):
         """
         return self.field_name
 
+class Symptom(models.Model):
+    name=models.CharField(max_length=20, help_text="Enter symptom's name")
+    weight=models.BooleanField()
+    def set(self,name,weight):
+        self.name=name
+        self.weight=weight
+
+class Desease(models.Model):
+    strictSymptoms=set()
+    excludeSymptoms=set()
+    procedures=set()
+    doctors=set()
+    is_any=True
+    is_none=True
+
+    def set(self,strictSymptoms,excludeSymptoms,is_any):
+        self.strictSymptoms=strictSymptoms
+        self.excludeSymptoms=excludeSymptoms
+        self.is_any=is_any
+
+    def set_suggestions(self,procedures,doctors):
+        self.procedures=procedures
+        self.doctors=doctors
+    def suggestions(self):
+        return self.doctors,self.procedures
+
+class ComputationID(models.Model):
+    number=models.CharField(max_length=20, help_text="Enter symptom's name")
+    def setComputetionID(self,number):
+        self.number=number
+    def getComputationID(self):
+        return self.number
