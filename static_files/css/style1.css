@@ -1,0 +1,31 @@
+.checkbox-primary-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+    border-color: #4285F4;
+    background-color: #4285F4;
+}
+.navbar{
+    background-color: #4285F4!important;
+}
+.hide {
+    display: none;
+}
+.pic{
+    width: inherit!important;
+    margin-top: 2px;
+}
+.row{
+    border-width:1px;border-style:solid;border-color:#0000FF;
+}
+.col{
+    border-width:1px;border-style:solid;border-color:#0000FF;
+}
+.col1{
+    max-width: 200px!important;
+    padding: 0px!important;
+
+}
+.col2{
+    max-width: 241px!important;
+}
+.col3{
+    max-width: 200px;
+}

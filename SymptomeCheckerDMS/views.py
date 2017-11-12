@@ -44,3 +44,27 @@ def test(request):
         'test.html',
         context={},
     )
+
+def AdditionalQ(request):
+
+    return render(
+        request,
+        'AdditionalQ.html',
+        context={},
+    )
+
+def results(request):
+
+    return render(
+        request,
+        'results.html',
+        context={},
+    )
+
+def start(request):
+
+    return render(
+        request,
+        'start.html',
+        context={},
+    )

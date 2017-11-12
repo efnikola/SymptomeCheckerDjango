@@ -1,84 +1,357 @@
-{% load staticfiles %}
+{%  load staticfiles %}
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../docs/favicon.ico">
-
-    <title>Navbar Template for Bootstrap</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{%  static 'css/style.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/style1.css' %}" rel="stylesheet">
+</head>
 
+<body>
+<!--Navbar-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/navbar.css'%}" rel="stylesheet">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Navbar</a>
 
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-  </head>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-  <body>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
 
-    <div class="container">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
 
-      <!-- Static navbar -->
-      <div id="nav-placeholder">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="">Default <span class="sr-only">(current)</span></a></li>
-              <li><a href="../../docs/examples/navbar-static-top">Static top</a></li>
-              <li><a href="../../docs/examples/navbar-fixed-top">Fixed top</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-      </div>
+            <!-- Links -->
 
-      <!-- Main component for a primary marketing message or call to action -->
-          </div> <!-- /container -->
+            <!-- Search form -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <!-- Collapsible content -->
+
+    </nav><!--/.Navbar-->
+
+</header>
+<main>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="animated fadeIn container">
+
+        <div class="row">
+            <div class="col">
+                Личная информация
+            </div>
+            <div class="col">
+                <H5>Выберите симптом</H5>
+            </div>
+            <div class="col">
+                <H5>Выберите уточняющие симптомы</H5>
+            </div>
+            <div class="col">
+                <H5>Рекомендации по мед. услугам</H5>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col col1">
+                <img src="{% static 'img/man.png' %}" class="pic">
+            </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script>window.jQuery || document.write('<script src="../../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../docs/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+            <script type="text/javascript" src="{%  static 'js/start.js' %}"></script>
+            <div class="col col2" >
+                <div class="form-group">
+                    <input name="group1" type="radio" class="with-gap" id="radio106" onclick="show1();">
+                    <label for="radio106">Кашель</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group1" type="radio" class="with-gap" id="radio107" onclick="show2();">
+                    <label for="radio107">Боль в горле</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group1" type="radio" class="with-gap" id="radio108" onclick="show3();">
+                    <label for="radio108">Проблемы с голосом</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group1" type="radio" class="with-gap" id="radio109" onclick="show4();">
+                    <label for="radio109">Увеличены лимфоузлы</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group1" type="radio" class="with-gap" id="radio110" onclick="show5();">
+                    <label for="radio110">Боль в шее</label>
+                </div>
+
+            </div>
+
+
+            <div class="col col3">
+
+                <div id="div1" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox1" onclick="showButton();">
+                        <label for="checkbox1">Боль при глотании</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox2" onclick="showButton();">
+                        <label for="checkbox2">Появилась после приёма пищи</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox3" onclick="showButton();">
+                        <label for="checkbox3">Температура тела > 37.5</label>
+                    </div>
+
+                    <!--<div class="form-group">-->
+                        <!--<input type="checkbox" id="checkbox4" onclick="showButton();">-->
+                        <!--<label for="checkbox4">Миндалины увеличены ЮЗЕР НЕ ЗНАЕТ МИНДАЛИН</label>-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group">-->
+                        <!--<input type="checkbox" id="checkbox5" onclick="showButton();">-->
+                        <!--<label for="checkbox5">Миндалины покрыты белым налётом</label>-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group">-->
+                        <!--<input type="checkbox" id="checkbox6" onclick="showButton();">-->
+                        <!--<label for="checkbox6">Миндалины покрыты жёлтым налётом</label>-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox7" onclick="showButton();">
+                        <label for="checkbox7">Рот открывается с трудом</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox8" onclick="showButton();">
+                        <label for="checkbox8">Беспокоит первый день</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox9" onclick="showButton();">
+                        <label for="checkbox9">Беспокоит неделю и больше</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox10" onclick="showButton();">
+                        <label for="checkbox10">Ставили диагноз хронический тонзилит</label>
+                    </div>
+                </div>
+
+
+                <div id="div2" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox21" onclick="showButton();">
+                        <label for="checkbox21">eeeeeeeeeeeeee</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox22" onclick="showButton();">
+                        <label for="checkbox22">Classic checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox23" onclick="showButton();">
+                        <label for="checkbox23">Classic checkbox</label>
+                    </div>
+                </div>
+
+
+                <div id="div3" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox31" onclick="showButton();">
+                        <label for="checkbox31">Classisdfvsdfc checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox32" onclick="showButton();">
+                        <label for="checkbox32">Classssifgdfdcheckbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox33" onclick="showButton();">
+                        <label for="checkbox33">Classssifgdfdcheckbox</label>
+                    </div>
+                </div>
+                <div id="div4" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox41" onclick="showButton();">
+                        <label for="checkbox41">Classisdfvsdfc checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox42" onclick="showButton();">
+                        <label for="checkbox42">Classssifgdfdcheckbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox43" onclick="showButton();">
+                        <label for="checkbox43">Classssifgdfdcheckbox</label>
+                    </div>
+                </div>
+                <div id="div5" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox51" onclick="showButton();">
+                        <label for="checkbox51">Classisdfvsdfc checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox52" onclick="showButton();">
+                        <label for="checkbox52">Classssifgdfdcheckbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox53" onclick="showButton();">
+                        <label for="checkbox53">Classssifgdfdcheckbox</label>
+                    </div>
+                </div>
+
+                <button id="buttonGet" type="button" class="btn btn-primary hide" onclick="getResult();">Получить рекомендации
+                </button>
+            </div>
+
+
+
+            <div class="col">
+                <div id="results" class="hide">
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkboxR1" disabled checked="checked">
+                        <label for="checkboxR1" class="disabled">Клинический анализ крови, СОЭ, лейкоформула(включено)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkboxR2" disabled>
+                        <label for="checkboxR2" class="disabled">Мазок из зева на флору и чувствительность (включено) </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkboxR3" disabled checked="checked">
+                        <label for="checkboxR3" class="disabled">Консультация терапевта (включено)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkboxR4" disabled>
+                        <label for="checkboxR4" class="disabled">Вызов врача на дом (+3500рублей)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkboxR5" disabled checked="checked">
+                        <label for="checkboxR5" class="disabled">Телемедицинская консультация врача терапевта (бесплатно)</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<!-- SCRIPTS -->
+<script>
+
+    function show1() {
+        document.getElementById('buttonGet').style.display = 'none';
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('div1').style.display = 'block';
+        document.getElementById('div2').style.display = 'none';
+        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div4').style.display = 'none';
+        document.getElementById('div5').style.display = 'none';
+    }
+
+    function show2() {
+        document.getElementById('buttonGet').style.display = 'none';
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('div1').style.display = 'none';
+        document.getElementById('div2').style.display = 'block';
+        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div4').style.display = 'none';
+        document.getElementById('div5').style.display = 'none';
+    }
+
+    function show3() {
+        document.getElementById('buttonGet').style.display = 'none';
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('div1').style.display = 'none';
+        document.getElementById('div2').style.display = 'block';
+        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div4').style.display = 'none';
+        document.getElementById('div5').style.display = 'none';
+    }
+
+    function show4() {
+        document.getElementById('buttonGet').style.display = 'none';
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('div1').style.display = 'none';
+        document.getElementById('div2').style.display = 'none';
+        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div4').style.display = 'block';
+        document.getElementById('div5').style.display = 'none';
+    }
+
+    function show5() {
+        document.getElementById('buttonGet').style.display = 'none';
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('div1').style.display = 'none';
+        document.getElementById('div2').style.display = 'none';
+        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div4').style.display = 'none';
+        document.getElementById('div5').style.display = 'block';
+    }
+
+    function getResult() {
+        document.getElementById('results').style.display = 'block';
+    }
+
+    function showButton() {
+        document.getElementById('buttonGet').style.display = 'block';
+    }
+
+</script>
+<!-- JQuery -->
+<script type="text/javascript" src="{%  static 'js/jquery-3.2.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{%  static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{%  static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{%  static 'js/mdb.min.js' %}"></script>
+</body>
+
 </html>
