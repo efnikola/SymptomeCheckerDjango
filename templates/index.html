@@ -1,4 +1,4 @@
-{%  load staticfiles %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{%  static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/mdb.min.css' %}" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="{%  static 'css/style.css' %}" rel="stylesheet">
     <link href="{%  static 'css/style1.css' %}" rel="stylesheet">
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark indigo">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Symptom checker</a>
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,39 +32,39 @@
                 aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
         <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
 
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
+            <!--&lt;!&ndash; Links &ndash;&gt;-->
+            <!--<ul class="navbar-nav mr-auto">-->
+                <!--<li class="nav-item active">-->
+                    <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">Features</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">Pricing</a>-->
+                <!--</li>-->
 
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+                <!--&lt;!&ndash; Dropdown &ndash;&gt;-->
+                <!--<li class="nav-item dropdown">-->
+                    <!--<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"-->
+                       <!--aria-haspopup="true" aria-expanded="false">Dropdown</a>-->
+                    <!--<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">-->
+                        <!--<a class="dropdown-item" href="#">Action</a>-->
+                        <!--<a class="dropdown-item" href="#">Another action</a>-->
+                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
+                    <!--</div>-->
+                <!--</li>-->
 
-            </ul>
-            <!-- Links -->
+            <!--</ul>-->
+            <!--&lt;!&ndash; Links &ndash;&gt;-->
 
-            <!-- Search form -->
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </form>
-        </div>
+            <!--&lt;!&ndash; Search form &ndash;&gt;-->
+            <!--<form class="form-inline">-->
+                <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+            <!--</form>-->
+        <!--</div>-->
         <!-- Collapsible content -->
 
     </nav><!--/.Navbar-->
@@ -74,212 +74,236 @@
     <br>
     <br>
     <br>
-    <br>
-
     <div class="animated fadeIn container">
 
         <div class="row">
             <div class="col">
-                Личная информация
-            </div>
-            <div class="col">
-                <H5>Выберите симптом</H5>
-            </div>
-            <div class="col">
-                <H5>Выберите уточняющие симптомы</H5>
-            </div>
-            <div class="col">
-                <H5>Рекомендации по мед. услугам</H5>
-            </div>
-
-        </div>
-        <br>
-        <div class="row">
-
-            <!--Grid column-->
-            <div class="col col1">
-                <img src="{% static 'img/man.png' %}" class="pic">
-            </div>
 
 
-            <script type="text/javascript" src="{%  static 'js/start.js' %}"></script>
-            <div class="col col2" >
-                <div class="form-group">
-                    <input name="group1" type="radio" class="with-gap" id="radio106" onclick="show1();">
-                    <label for="radio106">Кашель</label>
+                <div class="row">
+                    <div class="col col1">
+                        <!--<blockquote class="blockquote bq-primary hie">-->
+                        <!--<p class="bq-title">Рекомендации по мед. услугам</p>-->
+                        <!--</blockquote>-->
+                        <H5>Выберите область боли</H5>
+                    </div>
+                    <div class="animated fadeIn col col2 hide" id="symp1">
+                        <H5>Выберите симптом</H5>
+                    </div>
+                    <div class=" animated fadeIn col col3 hide" id="concreteSymp">
+                        <H5>Выберите уточняющие симптомы</H5>
+                    </div>
                 </div>
+                <br>
+                <div class="row">
 
-                <div class="form-group">
-                    <input name="group1" type="radio" class="with-gap" id="radio107" onclick="show2();">
-                    <label for="radio107">Боль в горле</label>
-                </div>
-
-                <div class="form-group">
-                    <input name="group1" type="radio" class="with-gap" id="radio108" onclick="show3();">
-                    <label for="radio108">Проблемы с голосом</label>
-                </div>
-
-                <div class="form-group">
-                    <input name="group1" type="radio" class="with-gap" id="radio109" onclick="show4();">
-                    <label for="radio109">Увеличены лимфоузлы</label>
-                </div>
-
-                <div class="form-group">
-                    <input name="group1" type="radio" class="with-gap" id="radio110" onclick="show5();">
-                    <label for="radio110">Боль в шее</label>
-                </div>
-
-            </div>
-
-
-            <div class="col col3">
-
-                <div id="div1" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox1" onclick="showButton();">
-                        <label for="checkbox1">Боль при глотании</label>
+                    <!--Grid column-->
+                    <div class="col col1 col-man">
+                        <img src="{% static 'img/man.png' %}" class="pic" id="pic1"
+                             onclick="this.src='{% static 'img/man-neck.png' %}';document.getElementById('symp1').style.display = 'block'; document.getElementById('symp').style.display = 'block';">
                     </div>
 
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox2" onclick="showButton();">
-                        <label for="checkbox2">Появилась после приёма пищи</label>
+
+                    <script type="text/javascript" src="{% static 'js/start.js' %}"></script>
+                    <div class="col col2">
+                        <div id="symp" class="animated fadeIn hide">
+                            <div class="form-group">
+                                <input name="group1" type="radio" class="with-gap" id="radio106" onclick="show1();">
+                                <label for="radio106">Кашель</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input name="group1" type="radio" class="with-gap" id="radio107" onclick="show2();">
+                                <label for="radio107">Боль в горле</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input name="group1" type="radio" class="with-gap" id="radio108" onclick="show3();">
+                                <label for="radio108">Проблемы с голосом</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input name="group1" type="radio" class="with-gap" id="radio109" onclick="show4();">
+                                <label for="radio109">Увеличены лимфоузлы</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input name="group1" type="radio" class="with-gap" id="radio110" onclick="show5();">
+                                <label for="radio110">Боль в шее</label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox3" onclick="showButton();">
-                        <label for="checkbox3">Температура тела > 37.5</label>
+
+                    <div class="col col3">
+
+                        <div id="div1" class=" animated fadeIn hide">
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox1" onclick="showButton();">
+                                <label for="checkbox1">Боль при глотании</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox2" onclick="showButton();">
+                                <label for="checkbox2">Появилась после приёма пищи</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox3" onclick="showButton();">
+                                <label for="checkbox3">Температура тела > 37.5</label>
+                            </div>
+
+                            <!--<div class="form-group">-->
+                            <!--<input type="checkbox" id="checkbox4" onclick="showButton();">-->
+                            <!--<label for="checkbox4">Миндалины увеличены ЮЗЕР НЕ ЗНАЕТ МИНДАЛИН</label>-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                            <!--<input type="checkbox" id="checkbox5" onclick="showButton();">-->
+                            <!--<label for="checkbox5">Миндалины покрыты белым налётом</label>-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                            <!--<input type="checkbox" id="checkbox6" onclick="showButton();">-->
+                            <!--<label for="checkbox6">Миндалины покрыты жёлтым налётом</label>-->
+                            <!--</div>-->
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox7" onclick="showButton();">
+                                <label for="checkbox7">Рот открывается с трудом</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox8" onclick="showButton();">
+                                <label for="checkbox8">Беспокоит первый день</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox9" onclick="showButton();">
+                                <label for="checkbox9">Беспокоит неделю и больше</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox10" onclick="showButton();">
+                                <label for="checkbox10">Ставили диагноз хронический тонзилит</label>
+                            </div>
+                        </div>
+
+
+                        <div id="div2" class="animated fadeIn hide">
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox21" onclick="showButton();">
+                                <label for="checkbox21">Помогите</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox22" onclick="showButton();">
+                                <label for="checkbox22">Почему так больно?</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox23" onclick="showButton();">
+                                <label for="checkbox23">Не могу говорить</label>
+                            </div>
+                        </div>
+
+
+                        <div id="div3" class="hide animated fadeIn">
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox31" onclick="showButton();">
+                                <label for="checkbox31">Проблемы</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox32" onclick="showButton();">
+                                <label for="checkbox32">Много проблем</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox33" onclick="showButton();">
+                                <label for="checkbox33">Проблемная я</label>
+                            </div>
+                        </div>
+                        <div id="div4" class="hide animated fadeIn">
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox41" onclick="showButton();">
+                                <label for="checkbox41">Увеличены</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox42" onclick="showButton();">
+                                <label for="checkbox42">Очень увеличены</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox43" onclick="showButton();">
+                                <label for="checkbox43">ОЧЕНЬ УВЕЛИЧЕНЫ</label>
+                            </div>
+                        </div>
+                        <div id="div5" class="hide animated fadeIn">
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox51" onclick="showButton();">
+                                <label for="checkbox51">Боль</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox52" onclick="showButton();">
+                                <label for="checkbox52">БОЛЬ</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox53" onclick="showButton();">
+                                <label for="checkbox53">МНОГО БОЛИ</label>
+                            </div>
+                        </div>
+
+                        <button id="buttonGet" type="button" class="btn btn-primary hide" onclick="getResult();">
+                            Получить
+                            рекомендации
+                        </button>
                     </div>
 
+
+                    <!--<div class="col">-->
+
+                    <!--<div id="results" class="hide">-->
                     <!--<div class="form-group">-->
-                        <!--<input type="checkbox" id="checkbox4" onclick="showButton();">-->
-                        <!--<label for="checkbox4">Миндалины увеличены ЮЗЕР НЕ ЗНАЕТ МИНДАЛИН</label>-->
+                    <!--<input type="checkbox" class="filled-in" id="checkboxR1" disabled checked="checked">-->
+                    <!--<label for="checkboxR1" class="disabled">Клинический анализ крови, СОЭ, лейкоформула(включено)</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="checkbox" class="filled-in" id="checkboxR2" disabled>-->
+                    <!--<label for="checkboxR2" class="disabled">Мазок из зева на флору и чувствительность (включено) </label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="checkbox" class="filled-in" id="checkboxR3" disabled checked="checked">-->
+                    <!--<label for="checkboxR3" class="disabled">Консультация терапевта (включено)</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="checkbox" class="filled-in" id="checkboxR4" disabled>-->
+                    <!--<label for="checkboxR4" class="disabled">Вызов врача на дом (+3500рублей)</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="checkbox" class="filled-in" id="checkboxR5" disabled checked="checked">-->
+                    <!--<label for="checkboxR5" class="disabled">Телемедицинская консультация врача терапевта (бесплатно)</label>-->
+                    <!--</div>-->
+                    <!--</div>-->
                     <!--</div>-->
 
-                    <!--<div class="form-group">-->
-                        <!--<input type="checkbox" id="checkbox5" onclick="showButton();">-->
-                        <!--<label for="checkbox5">Миндалины покрыты белым налётом</label>-->
-                    <!--</div>-->
-
-                    <!--<div class="form-group">-->
-                        <!--<input type="checkbox" id="checkbox6" onclick="showButton();">-->
-                        <!--<label for="checkbox6">Миндалины покрыты жёлтым налётом</label>-->
-                    <!--</div>-->
-
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox7" onclick="showButton();">
-                        <label for="checkbox7">Рот открывается с трудом</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox8" onclick="showButton();">
-                        <label for="checkbox8">Беспокоит первый день</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox9" onclick="showButton();">
-                        <label for="checkbox9">Беспокоит неделю и больше</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox10" onclick="showButton();">
-                        <label for="checkbox10">Ставили диагноз хронический тонзилит</label>
-                    </div>
                 </div>
 
-
-                <div id="div2" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox21" onclick="showButton();">
-                        <label for="checkbox21">eeeeeeeeeeeeee</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox22" onclick="showButton();">
-                        <label for="checkbox22">Classic checkbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox23" onclick="showButton();">
-                        <label for="checkbox23">Classic checkbox</label>
-                    </div>
-                </div>
-
-
-                <div id="div3" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox31" onclick="showButton();">
-                        <label for="checkbox31">Classisdfvsdfc checkbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox32" onclick="showButton();">
-                        <label for="checkbox32">Classssifgdfdcheckbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox33" onclick="showButton();">
-                        <label for="checkbox33">Classssifgdfdcheckbox</label>
-                    </div>
-                </div>
-                <div id="div4" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox41" onclick="showButton();">
-                        <label for="checkbox41">Classisdfvsdfc checkbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox42" onclick="showButton();">
-                        <label for="checkbox42">Classssifgdfdcheckbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox43" onclick="showButton();">
-                        <label for="checkbox43">Classssifgdfdcheckbox</label>
-                    </div>
-                </div>
-                <div id="div5" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox51" onclick="showButton();">
-                        <label for="checkbox51">Classisdfvsdfc checkbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox52" onclick="showButton();">
-                        <label for="checkbox52">Classssifgdfdcheckbox</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="checkbox53" onclick="showButton();">
-                        <label for="checkbox53">Classssifgdfdcheckbox</label>
-                    </div>
-                </div>
-
-                <button id="buttonGet" type="button" class="btn btn-primary hide" onclick="getResult();">Получить рекомендации
-                </button>
             </div>
+            <div class="col results-col">
+                <blockquote class="blockquote bq-primary hide" id="results" style="padding-top:0!important">
+                    <p class="bq-title" style="padding-top:0!important">Рекомендации по мед. услугам</p>
+                    <p class="space1"><i class="fa fa-check-circle icon1"></i>Клинический анализ крови, СОЭ,
+                        лейкоформула</p>
+                    <p class="space"><i class="fa fa-check-circle icon1"></i>Мазок из зева на флору и чувствительность
+                    </p>
+                    <p class="space"><i class="fa fa-check-circle icon1"></i>Консультация терапевта</p>
+                    <p class="space"><i class="fa fa-rub icon-pay"></i>Вызов врача на дом (+3500рублей)</p>
+                    <p class="space"><i class="fa fa-check-circle icon1"></i>Телемедицинская консультация врача
+                        терапевта</p>
+                    <button type="button" class="btn btn-primary  waves-effect back-to-site">Подтвердить</button>
+                </blockquote>
 
 
-
-            <div class="col">
-                <div id="results" class="hide">
-                    <div class="form-group">
-                        <input type="checkbox" class="filled-in" id="checkboxR1" disabled checked="checked">
-                        <label for="checkboxR1" class="disabled">Клинический анализ крови, СОЭ, лейкоформула(включено)</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" class="filled-in" id="checkboxR2" disabled>
-                        <label for="checkboxR2" class="disabled">Мазок из зева на флору и чувствительность (включено) </label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" class="filled-in" id="checkboxR3" disabled checked="checked">
-                        <label for="checkboxR3" class="disabled">Консультация терапевта (включено)</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" class="filled-in" id="checkboxR4" disabled>
-                        <label for="checkboxR4" class="disabled">Вызов врача на дом (+3500рублей)</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" class="filled-in" id="checkboxR5" disabled checked="checked">
-                        <label for="checkboxR5" class="disabled">Телемедицинская консультация врача терапевта (бесплатно)</label>
-                    </div>
-                </div>
             </div>
 
         </div>
     </div>
-
 </main>
 
 <!-- SCRIPTS -->
@@ -288,6 +312,7 @@
     function show1() {
         document.getElementById('buttonGet').style.display = 'none';
         document.getElementById('results').style.display = 'none';
+        document.getElementById('concreteSymp').style.display = 'block';
         document.getElementById('div1').style.display = 'block';
         document.getElementById('div2').style.display = 'none';
         document.getElementById('div3').style.display = 'none';
@@ -296,6 +321,7 @@
     }
 
     function show2() {
+        document.getElementById('concreteSymp').style.display = 'block';
         document.getElementById('buttonGet').style.display = 'none';
         document.getElementById('results').style.display = 'none';
         document.getElementById('div1').style.display = 'none';
@@ -306,16 +332,18 @@
     }
 
     function show3() {
+        document.getElementById('concreteSymp').style.display = 'block';
         document.getElementById('buttonGet').style.display = 'none';
         document.getElementById('results').style.display = 'none';
         document.getElementById('div1').style.display = 'none';
-        document.getElementById('div2').style.display = 'block';
-        document.getElementById('div3').style.display = 'none';
+        document.getElementById('div2').style.display = 'none';
+        document.getElementById('div3').style.display = 'block';
         document.getElementById('div4').style.display = 'none';
         document.getElementById('div5').style.display = 'none';
     }
 
     function show4() {
+        document.getElementById('concreteSymp').style.display = 'block';
         document.getElementById('buttonGet').style.display = 'none';
         document.getElementById('results').style.display = 'none';
         document.getElementById('div1').style.display = 'none';
@@ -326,6 +354,7 @@
     }
 
     function show5() {
+        document.getElementById('concreteSymp').style.display = 'block';
         document.getElementById('buttonGet').style.display = 'none';
         document.getElementById('results').style.display = 'none';
         document.getElementById('div1').style.display = 'none';
@@ -342,16 +371,15 @@
     function showButton() {
         document.getElementById('buttonGet').style.display = 'block';
     }
-
 </script>
 <!-- JQuery -->
 <script type="text/javascript" src="{%  static 'js/jquery-3.2.1.min.js' %}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="{%  static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{%  static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="{%  static 'js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
 </body>
 
 </html>

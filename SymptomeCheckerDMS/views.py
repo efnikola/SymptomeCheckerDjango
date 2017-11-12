@@ -30,21 +30,6 @@ def symptom(request):
         context={},
     )
 
-
-def welcome(request):
-    return HttpResponse('Welcome bitches!')
-
-def fuckyou(request):
-    return HttpResponse('Fuck you!')
-
-def test(request):
-
-    return render(
-        request,
-        'test.html',
-        context={},
-    )
-
 def AdditionalQ(request):
 
     return render(
